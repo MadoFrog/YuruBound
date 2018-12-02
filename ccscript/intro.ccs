@@ -1,0 +1,89 @@
+//The flyover sequence uses warps 150 and 151 by default
+//Warp coordinates can be changed in teleport_destination_table.yml
+
+//Flyover Text
+Flyover1:
+"[02 0C][01 32]This is a test[09][00]" //"[02 0C][01 32]The year is 199X[09][00]"
+
+Flyover2:
+"[02 0C][01 0C]Onett, a small town in Eagleland[09][00]"
+
+Flyover3:
+"[02 0C][01 3D][08 01]'s house[09][00]"
+
+//Setup stuff
+newgame_location (2112, 1768)		//Should be the same coordinates as flyover1mov
+newgame_startup (Intro)
+
+
+//These two commands control the coordinates of the first two flyovers, and the direction they move in
+//For directions, 0 is north, 1 is northeast, 2 is east, etc.
+flyover1mov (2112, 1768, 7)		//First two numbers should be the same coordinates as newgame_location
+flyover2mov (2000, 1424, 1)		//First two numbers should be same as the coordinates of Warp 150, multiplied by 8
+
+//This command controls the starting coordinates of the third flyover
+flyover3start (2664, 888)		//Should be same as the coordinates of Warp 151, multiplied by 8
+
+//This command controls the coordinates the third flyover will move to
+flyover3mov (2664, 336)
+
+//Intro string
+Intro:
+set(469)	//clears officers
+set(104)	//day music
+set(105)	//no roadblocks
+set(375)	//Onett NPCs
+set(422)	//Onett cars
+set(517)	//house lights on
+
+hide_party
+gen_sprite (106, 476, 1)	//Activates first flyover
+call (0xc9b4b8)
+warp (150)					//Warps to initial coordinates of flyover 2
+gen_sprite (106, 477, 1)	//Activates first flyover
+call (0xc9b4b8)
+warp (151)					//Warps to initial coordinates of flyover 3
+gen_sprite (106, 478, 1)	//Activates first flyover
+call (0xc9b4b8)
+warp (10)					//Warps to Ness's room
+show_party (1)
+window_open(1)
+"@A note from the developer:" next
+"@Sorry the intro isn't perfect,/ but gosh darnit,/ it's close enough!" next
+window_closeall
+eob
+
+//DON'T EDIT ANYTHING BELOW
+
+//New commands
+
+command e(label) "{long label}"
+command gen_sprite (sprite, move, style) "[1F 15 {short sprite} {short move} {byte style}]"
+
+command flyover1mov (x, y, direction) {
+	ROM[0xC3ABEE] = "{short x}"
+	ROM[0xC3ABF1] = "{short y}"
+	ROM[0xC3AC06] = "{byte direction}"
+}
+
+command flyover2mov (x, y, direction) {
+	ROM[0xC3AC28] = "{short x}"
+	ROM[0xC3AC2B] = "{short y}"
+	ROM[0xC3AC40] = "{byte direction}"
+}
+
+command flyover3start (x, y) {
+	ROM[0xC3AC62] = "{short x}"
+	ROM[0xC3AC65] = "{short y}"
+}
+
+command flyover3mov (x, y) {
+	ROM[0xC3AC85] = "{short x}"
+	ROM[0xC3AC89] = "{short y}"
+}
+
+//Rom Locations
+
+ROM[0xC49EA4] = "[{e(Flyover1)}]"
+ROM[0xC49EA8] = "[{e(Flyover2)}]"
+ROM[0xC49EAC] = "[{e(Flyover3)}]"

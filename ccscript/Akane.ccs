@@ -1,0 +1,43 @@
+KissuStand:
+	define MetAkane = flag 140
+
+	if not MetAkane 
+	{
+		"@What?" pause(30) next
+		"@It's a living!" next
+		set(MetAkane) end
+	}
+	else 
+	{
+		"@So|.|.|." next
+		"@Are you interested?" next
+		"@It's $20 a pop." next
+		menu
+		{
+			"Yes":
+			{
+				if hasmoney(20) 
+				{
+					"@Oh, I could never charge you for that, {name(1)}." next
+					"@C'mere!" next
+					goto (Kissu)
+				}
+				else 
+				{
+					"@Oh, you don't have enough?" next
+					"@Don't worry, this one's on the house. (wink)" next
+					goto (Kissu)
+				}
+			}
+			"No": 
+			{
+				"@Y-yeah, who'd kiss their sister, r-right?" next
+				"Haha." end
+			}
+		}
+	}
+
+Kissu:
+	"@(Akane gives {name(1)} a big kiss)" pause(50)
+	"@(It goes on for longer than you'd expect)" next
+	"@What do you mean that's not worth $20?!" end

@@ -1,0 +1,57 @@
+#Battle backgrounds
+/BattleBGs/**/*.*
+
+#Battle sprites
+/BattleSprites/**/*.*
+
+#ccscript (barring new files)
+/ccscript/main.ccs
+/ccscript/data_*.ccs
+/ccscript/summary.txt
+
+#Fonts
+/Fonts/**/*.*
+
+#Logos
+/Logos/**/*.*
+
+#Include custom logos
+!/Logos/APE.png
+!/Logos/HALKEN.png
+
+#Overworld sprites
+/SpriteGroups/**/*.*
+
+#Include custom sprites
+!/SpriteGroups/001.png
+!/SpriteGroups/002.png
+!/SpriteGroups/003.png
+!/SpriteGroups/004.png
+!/SpriteGroups/014.png
+!/SpriteGroups/020.png
+!/SpriteGroups/024.png
+!/SpriteGroups/145.png
+!/SpriteGroups/335.png
+!/SpriteGroups/336.png
+!/SpriteGroups/337.png
+!/SpriteGroups/338.png
+!/SpriteGroups/362.png
+
+#Swirls
+/Swirls/**/*.*
+
+#Tilesets
+/Tilesets/**/*.*
+
+#Include Custom Tiles
+!/Tilesets/15.fts
+
+#Title screen
+/TitleScreen/**/*.*
+
+#Town maps
+/TownMaps/**/*.*
+
+#Window graphics
+/WindowGraphics/**/*.*
+
