@@ -1,0 +1,8 @@
+Akane_Door:
+    define SeenSign = flag 978
+
+    "{sound(111)}{pause(40)}{window_open(1)}@Onee-chan's room" newline      //can't make a function, so just copy the first bit use this as a reference I guess
+    "KEEP OUT!" next                                                        //set the door's event flag to 8145 and its destination to where the door is placed
+    set(SeenSign)
+    window_closeall
+    eob

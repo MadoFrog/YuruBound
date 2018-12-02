@@ -1791,15 +1791,6 @@
     Text Pointer: $0
     Direction: down
   - Type: door
-    Destination X: 956
-    Event Flag: 0
-    Destination Y: 93
-    X: 17
-    Y: 27
-    Style: 7
-    Text Pointer: $0
-    Direction: left
-  - Type: door
     Destination X: 934
     Event Flag: 0
     Destination Y: 42
@@ -1817,6 +1808,15 @@
     Style: 7
     Text Pointer: $0
     Direction: right
+  - Type: door
+    Destination X: 956
+    Event Flag: 33093
+    Destination Y: 93
+    X: 17
+    Y: 27
+    Style: 0
+    Text Pointer: Objects.Akane_Door
+    Direction: down
   30:
   - Type: door
     Destination X: 963

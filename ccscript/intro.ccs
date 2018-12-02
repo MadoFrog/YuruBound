@@ -35,6 +35,7 @@ set(105)	//no roadblocks
 set(375)	//Onett NPCs
 set(422)	//Onett cars
 set(517)	//house lights on
+set(199)	//lets you save
 
 hide_party
 gen_sprite (106, 476, 1)	//Activates first flyover

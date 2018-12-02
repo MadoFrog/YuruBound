@@ -1,7 +1,7 @@
 KissuStand:
-	define MetAkane = flag 140
+	define MetAkane = flag 977	//see datacrystal for a list of unused flags
 
-	if not MetAkane 
+	if not MetAkane
 	{
 		"@What?" pause(30) next
 		"@It's a living!" next
