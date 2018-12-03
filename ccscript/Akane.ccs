@@ -4,8 +4,9 @@ KissuStand:
 	if not MetAkane
 	{
 		"@What?" pause(30) next
-		"@It's a living!" next
-		set(MetAkane) end
+		"@It's a living!"
+		set(MetAkane)
+		end
 	}
 	else 
 	{
@@ -25,22 +26,22 @@ KissuStand:
 				else 
 				{
 					"@Oh,/ you don't have enough?" next
-					"@Don't worry,/ this one's on the house. (wink)" next
+					"@Don't worry,/ this one's on the house (wink)." next
 					goto (Kissu)
 				}
 			}
 			"No": 
 			{
 				"@Y-yeah,/ who'd kiss their sister,/ r-right?" next
-				"Haha." end
+				"@Haha." end
 			}
 		}
 	}
 
 Kissu:
-	"@(Akane gives {name(1)} a big kiss)" pause(50)
-	"@(It goes on for longer than you'd expect)" next
-	"@What do you mean that's not worth $20?!" end
+	"@(Akane gives {name(1)} a big kiss)." next
+	pause(700) "@(It goes on for longer than you'd expect)." next
+	pause(300)"@What do you mean that's not worth $20?!" end
 
 Bat:
 	define SeenSign = flag 978
@@ -54,7 +55,7 @@ Bat:
 		if SeenSign
 		{
 			"@My room is locked?" next
-			"@{name(1)},/ what have I told you about trying to go in in my room?" pause(30) next
+			"@{name(1)},/ what have I told you about trying to go in in my room?" pause(60) next
 		}
 		"@Ah,/ here you go!" next
 		"@(Akane produces a cracked bat)." next
@@ -66,7 +67,7 @@ Bat:
 	{
 		if SeenSign
 		{
-			"@{name(1)},/ what have I told you about trying to go in in my room?" pause(30) end
+			"@{name(1)},/ what have I told you about trying to go in in my room?" pause(60) end
 		}
 		else
 		{

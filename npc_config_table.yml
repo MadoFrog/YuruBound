@@ -193,7 +193,7 @@
   Movement: 40
   Show Sprite: always
   Sprite: 215
-  Text Pointer 1: $c75909
+  Text Pointer 1: $c68017 #original pointer is $c75909
   Text Pointer 2: $0
   Type: person
 22:
@@ -351,11 +351,11 @@
   Type: person
 39:
   Direction: down
-  Event Flag: 0x2f0
+  Event Flag: 0x0
   Movement: 605
-  Show Sprite: when event flag unset
-  Sprite: 136
-  Text Pointer 1: $c70144
+  Show Sprite: always
+  Sprite: 145
+  Text Pointer 1: Akane.KissuStand
   Text Pointer 2: $0
   Type: person
 40:
