@@ -1,3 +1,70 @@
-//ok everyone!
-//do you guys see this file?
-//well there's nothing in it yet but there will be
+Ayano:
+    command e(label) "{long label}" //use this coilsnake gets confused over e
+    define CalledAyano = flag 979
+    define KyoukoCall = flag 980 //set if Kyouko is in the party while calling
+
+    //Do a check to see who's in the party, for now assume Akari is okay
+    "@Hello?" next
+    "@Oh, {name(1)}?" next
+    if not CalledAyano
+    {
+        "@Nice to hear from you again." next
+        "@As you know,/ the student coucil likes to keep tabs on everyone." next
+        "@Let us know if anything happens so we can record it." next
+        "@We can also tell you some useful information like this:" next
+    }
+    else
+    {
+        "Since we last spoke,/" newline
+    }
+    "@$[1C 0A 00 00 00 00] has been deposited into your bank account." next
+    "@Taking away what you've spent, you should now have" next
+    "@$[1C 01 07] in the bank." next
+    "{counter(1)}@As for exp to get to the next level,[03]" goto(Exp1)
+
+Exp1:
+    "{ctoarg}[1D 19 00][1B 03 {e(Exp4)}][19 10 00][1B 02 {e(Exp4)}]{rtoarg}[19 18 00][1B 02 {e(Exp3)}]" newline
+    "@[1C 02 00]...{swap}[1C 0A 00 00 00 00].[03]" goto(Exp2)
+
+Exp2:
+    "{inc}" goto(Exp1)
+
+Exp3:
+    newline
+    "@[1C 02 00]..." linebreak
+    "  has already reached her maximum level." next
+    "@That's impressive!" next
+    next
+    next
+    goto(Exp2)
+
+Exp4:
+    newline
+    if not CalledAyano
+    {
+        "@Pretty cool, huh?" next
+        set(CalledAyano)
+    }
+    "@Would you like me to record what's happened so far?" newline
+    menu 
+    {
+        "Yes" : 
+        {
+            "@Alright,/ just a second." next
+            save
+            "@Okay,/ I think I got all that." next
+
+        }
+        "No" : 
+        {
+            "@Just wanted to hear my voice,/ huh?" next
+            "@That's okay,/ I don't mind." next
+        }
+    }
+    "@Well, take care {name(1)}." next
+    if KyoukoCall
+    {
+        "@T-tell {name(2)} I said hi" next
+    }
+    newline
+    "{sound(11)}@(Click!  Beep-beep-beep...)" end

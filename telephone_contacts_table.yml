@@ -1,7 +1,7 @@
 0:
   Event Flag: 0xc7
   Name: Ayano
-  Text Pointer: $c63229
+  Text Pointer: PhoneCalls.Ayano #$c63229
 1:
   Event Flag: 0xc8
   Name: Mom

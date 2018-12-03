@@ -6,3 +6,4 @@ Just to be safe, there aren't any EarthBound assets in this repository - it's ju
 
 # How Can I Help?
 Truthfully, I don't really know how to use github, but I think you can submit a pull request to add any changes you've made. Be it a new sprite, or some new text. 
+That said, if you are going to add new text, please append any flags used to Flags_in_use.txt.

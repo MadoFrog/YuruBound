@@ -1,2 +1,4 @@
 TheDog:
-    "@(Yeah, it's a lazy dog dangling afternoon.)" end
+    "@(Yeah, it's a lazy dog dangling afternoon.)" next
+    "@(You should call Ayano and give her an update if anything happens,/" next
+    "@I'm sure she'd appreciate it.)" end
