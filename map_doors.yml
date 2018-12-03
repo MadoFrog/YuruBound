@@ -1815,7 +1815,7 @@
     X: 17
     Y: 27
     Style: 0
-    Text Pointer: Objects.Akane_Door
+    Text Pointer: Objects.AkaneDoor
     Direction: down
   30:
   - Type: door

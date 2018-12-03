@@ -18,20 +18,20 @@ KissuStand:
 			{
 				if hasmoney(20) 
 				{
-					"@Oh, I could never charge you for that, {name(1)}." next
+					"@Oh,/ I could never charge you for that,/ {name(1)}." next
 					"@C'mere!" next
 					goto (Kissu)
 				}
 				else 
 				{
-					"@Oh, you don't have enough?" next
-					"@Don't worry, this one's on the house. (wink)" next
+					"@Oh,/ you don't have enough?" next
+					"@Don't worry,/ this one's on the house. (wink)" next
 					goto (Kissu)
 				}
 			}
 			"No": 
 			{
-				"@Y-yeah, who'd kiss their sister, r-right?" next
+				"@Y-yeah,/ who'd kiss their sister,/ r-right?" next
 				"Haha." end
 			}
 		}
@@ -41,3 +41,37 @@ Kissu:
 	"@(Akane gives {name(1)} a big kiss)" pause(50)
 	"@(It goes on for longer than you'd expect)" next
 	"@What do you mean that's not worth $20?!" end
+
+Bat:
+	define SeenSign = flag 978
+	define GotBat = flag 805
+
+	if not GotBat
+	{
+		"@{name(1)},/ it's pretty dangerous out there." next
+		"@You might want to take a bat with you to be safe." next
+		"@I think I have one lying around somewhere|.|.|.|" next
+		if SeenSign
+		{
+			"@My room is locked?" next
+			"@{name(1)},/ what have I told you about trying to go in in my room?" pause(30) next
+		}
+		"@Ah,/ here you go!" next
+		"@(Akane produces a cracked bat)." next
+		Functions.GetItem(17)
+		set(GotBat)
+		eob
+	}
+	else
+	{
+		if SeenSign
+		{
+			"@{name(1)},/ what have I told you about trying to go in in my room?" pause(30) end
+		}
+		else
+		{
+			"@Please stay safe, {name(1)}." end
+		}
+	}
+
+//note: Akane should probably have a heal added at some point. Probably to sprite 15.

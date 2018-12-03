@@ -1,4 +1,4 @@
-Akane_Door:
+AkaneDoor:
     define SeenSign = flag 978
 
     "{sound(111)}{pause(40)}{window_open(1)}@Onee-chan's room" newline      //can't make a function, so just copy the first bit use this as a reference I guess

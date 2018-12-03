@@ -126,20 +126,20 @@
   Type: person
 14:
   Direction: down
-  Event Flag: 0x1d5
-  Movement: 37
+  Event Flag: 0x325
+  Movement: 12
   Show Sprite: when event flag set
   Sprite: 145
-  Text Pointer 1: $c74f56
+  Text Pointer 1: Akane.Bat
   Text Pointer 2: $0
   Type: person
 15:
   Direction: right
-  Event Flag: 0x1d5
+  Event Flag: 0x325
   Movement: 12
   Show Sprite: when event flag unset
   Sprite: 145
-  Text Pointer 1: $c66d3e
+  Text Pointer 1: Akane.Bat
   Text Pointer 2: $0
   Type: person
 16:
@@ -148,7 +148,7 @@
   Movement: 627
   Show Sprite: when event flag unset
   Sprite: 359
-  Text Pointer 1: $c75717
+  Text Pointer 1: OtherNPCs1.TheDog
   Text Pointer 2: $0
   Type: person
 17:
