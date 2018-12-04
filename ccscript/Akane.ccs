@@ -61,7 +61,7 @@ Bat:
 		"@(Akane produces a cracked bat)." next
 		Functions.GetItem(17)
 		set(GotBat)
-		end
+		eob
 	}
 	else
 	{
@@ -75,6 +75,4 @@ Bat:
 		}
 	}
 
-Heal:	//maybe implement a check for other party members at some point for different dialogue
-	"@Hey, {name(1)}." next
-	"@I got some [1C 01 04] earlier,/ please have some some?[03]" healall "{music(12)}{pause(200)}{music_resume}" eob
+//note: Akane should probably have a heal added at some point. Probably to sprite 15.

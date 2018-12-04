@@ -3,4 +3,5 @@ command GetItem(x)
    give(1, x)
    sound(SND_SPECIALITEM)
    "@({name(1)} got the {itemname(x)})."
+   next
 }

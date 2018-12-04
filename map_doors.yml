@@ -874,7 +874,7 @@
     X: 15
     Y: 10
     Style: 10
-    Text Pointer: Objects.BatDoor
+    Text Pointer: $c99b75
     Direction: down
   - Type: door
     Destination X: 892
@@ -2228,26 +2228,6 @@
     Style: 10
     Text Pointer: $0
     Direction: down
-  - Type: object
-    X: 8
-    Y: 8
-    Text Pointer: Objects.AkariBookCase
-  - Type: object
-    X: 9
-    Y: 8
-    Text Pointer: Objects.AkariBookCase
-  - Type: object
-    X: 10
-    Y: 8
-    Text Pointer: Objects.AkariBookCase
-  - Type: object
-    X: 17
-    Y: 7
-    Text Pointer: Objects.Bush
-  - Type: object
-    X: 18
-    Y: 7
-    Text Pointer: Objects.Bush
 5:
   0:
   - Type: door
