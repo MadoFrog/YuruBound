@@ -126,16 +126,16 @@
   Type: person
 14:
   Direction: down
-  Event Flag: 0x325
+  Event Flag: 0x3d5
   Movement: 12
   Show Sprite: when event flag set
   Sprite: 145
-  Text Pointer 1: Akane.Bat
+  Text Pointer 1: Akane.Heal
   Text Pointer 2: $0
   Type: person
 15:
   Direction: right
-  Event Flag: 0x325
+  Event Flag: 0x3d5
   Movement: 12
   Show Sprite: when event flag unset
   Sprite: 145

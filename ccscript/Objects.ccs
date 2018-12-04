@@ -6,3 +6,18 @@ AkaneDoor:
     set(SeenSign)
     window_closeall
     eob
+
+Bush:
+    "@What a nice bush!" next
+    "@|.|.|. Or is it a tree?" end
+
+AkariBookCase:
+    "@{name(1)} has lots of books." next
+    "@She might be a little young to be reading some of these,/ though." end
+
+BatDoor:
+    define GotBat = flag 805
+    if GotBat
+    {
+        set(981) eob   //lets Akane start healing you
+    }
