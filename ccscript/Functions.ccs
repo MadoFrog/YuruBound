@@ -1,6 +1,10 @@
-command GetItem(x)
+command adr24(a) "[{byte[0] a} {byte[1] a} {byte[2] a}]"
+
+command GetItem(Item, FailLabel) 
 {
-   give(1, x)
-   sound(SND_SPECIALITEM)
-   "@({name(1)} got the {itemname(x)})."
+   "[1d 03 ff]"
+   "[1b 02]" adr24(FailLabel) "[00]"
+   "[1d 0e 00]" Item
+   call(0xc7dccf)
+   "[13]"
 }

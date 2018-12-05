@@ -1067,6 +1067,22 @@
     Style: 1
     Text Pointer: $c9b20e
     Direction: left
+  - Type: object
+    X: 28
+    Y: 26
+    Text Pointer: Objects.NoHomers
+  - Type: object
+    X: 29
+    Y: 26
+    Text Pointer: Objects.NoHomers
+  - Type: object
+    X: 29
+    Y: 27
+    Text Pointer: Objects.NoHomers
+  - Type: object
+    X: 28
+    Y: 27
+    Text Pointer: Objects.NoHomers
   8: null
   9: null
   10:

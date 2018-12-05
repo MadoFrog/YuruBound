@@ -59,7 +59,7 @@ Bat:
 		}
 		"@Ah,/ here you go!" next
 		"@(Akane produces a cracked bat)." next
-		Functions.GetItem(17)
+		Functions.GetItem(17,NoRoom)
 		set(GotBat)
 		end
 	}
@@ -74,6 +74,12 @@ Bat:
 			"@Please stay safe, {name(1)}." end
 		}
 	}
+
+NoRoom:
+	"@Looks like you're carrying too much, sis." next
+	"@Talk to me again when you've cleared some things out."
+	unset(805)
+	end
 
 Heal:	//maybe implement a check for other party members at some point for different dialogue
 	"@Hey, {name(1)}." next

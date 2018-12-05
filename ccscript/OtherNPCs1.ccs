@@ -2,3 +2,9 @@ TheDog:
     "@(Yeah, it's a lazy dog dangling afternoon.)" next
     "@(You should call Ayano and give her an update if anything happens,/" next
     "@I'm sure she'd appreciate it.)" end
+
+GirlOutsideLibrary:
+    "@A library is a good place to learn things." next
+    "@Shame all the good stuff is reference only." next
+    "@They let you take out maps for free, though." next
+    "@Isn't that nice of them?" end

@@ -1165,7 +1165,7 @@
   Movement: 607
   Show Sprite: when event flag set
   Sprite: 122
-  Text Pointer 1: $c747ed
+  Text Pointer 1: OtherNPCs1.GirlOutsideLibrary
   Text Pointer 2: $0
   Type: person
 130:
@@ -1201,7 +1201,7 @@
   Movement: 608
   Show Sprite: when event flag set
   Sprite: 115
-  Text Pointer 1: $c659c9
+  Text Pointer 1: $0
   Text Pointer 2: $0
   Type: person
 134:
@@ -12694,7 +12694,7 @@
   Movement: 9
   Show Sprite: always
   Sprite: 214
-  Text Pointer 1: $c7d85b
+  Text Pointer 1: Objects.LetItBe #$c7d85b
   Text Pointer 2: $100
   Type: item
 1411:

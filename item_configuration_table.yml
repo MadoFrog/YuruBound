@@ -2153,22 +2153,22 @@
   - poo can use
   Name: Ruler
   Type: 48
-141:
-  Action: 171
+141: #formerly snake bag
+  Action: 1
   Argument:
   - 0
   - 0
   - 0
   - 0
-  Cost: 98
-  Help Text Pointer: $c54d10
+  Cost: 1
+  Help Text Pointer: Objects.LetItBeDesc
   Misc Flags:
   - jeff can use
   - ness can use
   - paula can use
   - poo can use
-  Name: Snake bag
-  Type: 52
+  Name: Bad album
+  Type: 56
 142:
   Action: 162
   Argument:

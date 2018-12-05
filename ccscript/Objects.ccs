@@ -2,7 +2,7 @@ AkaneDoor:
     define SeenSign = flag 978
 
     "{sound(111)}{pause(40)}{window_open(1)}@Onee-chan's room" newline      //can't make a function, so just copy the first bit use this as a reference I guess
-    "KEEP OUT!" next                                                        //set the door's event flag to 8145 and its destination to where the door is placed
+    "  KEEP OUT!" next                                                      //set the door's event flag to 8145 and its destination to where the door is placed
     set(SeenSign)
     window_closeall
     eob
@@ -21,3 +21,32 @@ BatDoor:
     {
         set(981) eob   //lets Akane start healing you
     }
+
+NoHomers:
+    "@(No" newline
+    "  {name(1)}s" newline
+    "  club)" end
+
+LetItBe:
+    define Opened = flag 982
+
+    if not Opened
+    {
+        arg(141)            //In theory this shouldn't have fixed anything but it did, so I'll take it. Don't change it.
+        "[1B 06]"
+        call(0xc7d85b) set(Opened) 
+        Functions.GetItem(141, LetItBeFull) end
+    }
+    else
+    {
+        "@The garbage can is just stacks upon stacks of Let It Be." next
+        "@{name(1)} doesn't want to take any more copies of it." end
+    }
+    
+LetItBeDesc:
+    "@The Beatles - Let It Be." next
+    "@It's not very good." end
+
+LetItBeFull:
+    "@No one has any room to carry Let It Be." next
+    "@That's probably for the best." end
