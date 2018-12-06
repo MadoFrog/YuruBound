@@ -51,6 +51,7 @@
 
 #Town maps
 /TownMaps/**/*.*
+!/TownMaps/icons.png
 
 #Window graphics
 /WindowGraphics/**/*.*

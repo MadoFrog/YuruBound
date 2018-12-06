@@ -33,15 +33,10 @@
   5: null
   6: null
   7:
-  - Type: door
-    Destination X: 945
-    Event Flag: 33401
-    Destination Y: 154
+  - Type: object
     X: 5
     Y: 15
-    Style: 4
-    Text Pointer: $c9b20e
-    Direction: left
+    Text Pointer: Objects.SmallDoor
   8:
   - Type: object
     X: 2

@@ -28,21 +28,22 @@ NoHomers:
     "  club)" end
 
 LetItBe:
-    define Opened = flag 982
+    define Opened = flag 803
 
     if not Opened
     {
-        arg(141)            //In theory this shouldn't have fixed anything but it did, so I'll take it. Don't change it.
-        "[1B 06]"
-        call(0xc7d85b) set(Opened) 
-        Functions.GetItem(141, LetItBeFull) end
+        set(Opened)
+        "@{name(1)} dug around in the trash can." next
+        "@Well,/ let's see here..." next
+        "@There was just plain ol' garbage in the trash can." next
+        Functions.GetItem(141, LetItBeFull) eob
     }
     else
     {
         "@The garbage can is just stacks upon stacks of Let It Be." next
-        "@{name(1)} doesn't want to take any more copies of it." end
+        "@{name(1)} doesn't want to take another copy of it." end
     }
-    
+
 LetItBeDesc:
     "@The Beatles - Let It Be." next
     "@It's not very good." end
@@ -50,3 +51,6 @@ LetItBeDesc:
 LetItBeFull:
     "@No one has any room to carry Let It Be." next
     "@That's probably for the best." end
+
+SmallDoor:
+    "@Even {name(1)} is too big to fit through this door." end

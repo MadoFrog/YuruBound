@@ -822,8 +822,8 @@
   Event Flag: 0x0
   Movement: 605
   Show Sprite: always
-  Sprite: 59
-  Text Pointer 1: $c730f6
+  Sprite: 355
+  Text Pointer 1: OtherNPCs1.KissGuy
   Text Pointer 2: $0
   Type: person
 92:
@@ -1196,12 +1196,12 @@
   Text Pointer 2: $0
   Type: person
 133:
-  Direction: right
+  Direction: up
   Event Flag: 0x177
   Movement: 608
   Show Sprite: when event flag set
-  Sprite: 115
-  Text Pointer 1: $0
+  Sprite: 164
+  Text Pointer 1: OtherNPCs1.HillGuy
   Text Pointer 2: $0
   Type: person
 134:
@@ -12688,15 +12688,15 @@
   Text Pointer 1: $c7d84f
   Text Pointer 2: $5a
   Type: item
-1410:
+1410:             #Pop quiz trash can
   Direction: down
   Event Flag: 0x323
   Movement: 9
   Show Sprite: always
   Sprite: 214
   Text Pointer 1: Objects.LetItBe #$c7d85b
-  Text Pointer 2: $100
-  Type: item
+  Text Pointer 2: $0
+  Type: person #originally item
 1411:
   Direction: down
   Event Flag: 0x324

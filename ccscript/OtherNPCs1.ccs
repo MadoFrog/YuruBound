@@ -8,3 +8,22 @@ GirlOutsideLibrary:
     "@Shame all the good stuff is reference only." next
     "@They let you take out maps for free, though." next
     "@Isn't that nice of them?" end
+
+HillGuy:
+    "@I've seen many clouds in my time." next
+    "@But I must say,/ these are by far the strangest looking ones I've seen." end
+
+KissGuy:
+    "@When you're in trouble, do you think you'd ever like to have a kiss?" next
+    menu 
+    {
+        "Yes" : 
+        {
+            "@The girl in the next house is offering a service like that." end
+
+        }
+        "No" : 
+        {
+            "@Yeah,/ I guess that is kinda weird." end
+        }
+    }
