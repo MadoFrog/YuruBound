@@ -2416,7 +2416,7 @@
     X: 23
     Y: 13
     Style: 0
-    Text Pointer: $c9a432
+    Text Pointer: Objects.PopQuiz
     Direction: down
   - Type: door
     Destination X: 267

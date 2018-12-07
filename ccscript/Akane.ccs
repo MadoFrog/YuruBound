@@ -12,7 +12,7 @@ KissuStand:
 	{
 		"@So|.|.|." next
 		"@Are you interested?" next
-		"@It's $20 a pop." next
+		"@It's $20 a pop." newline
 		menu
 		{
 			"Yes":

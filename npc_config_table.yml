@@ -1198,7 +1198,7 @@
 133:
   Direction: up
   Event Flag: 0x177
-  Movement: 608
+  Movement: 605
   Show Sprite: when event flag set
   Sprite: 164
   Text Pointer 1: OtherNPCs1.HillGuy
@@ -1636,13 +1636,13 @@
   Text Pointer 1: $0
   Text Pointer 2: $0
   Type: object
-182:
-  Direction: down
-  Event Flag: 0x0
-  Movement: 8
-  Show Sprite: always
-  Sprite: 227
-  Text Pointer 1: $0
+182:  #Kyouko in arcade's back area
+  Direction: left
+  Event Flag: 982
+  Movement: 609
+  Show Sprite: when event flag unset
+  Sprite: 002
+  Text Pointer 1: OtherNPCs1.KyoukoDemo
   Text Pointer 2: $0
   Type: object
 183:
@@ -1783,12 +1783,12 @@
 198:
   Direction: down
   Event Flag: 0x0
-  Movement: 10
+  Movement: 606
   Show Sprite: always
-  Sprite: 197
-  Text Pointer 1: $c86279
+  Sprite: 121
+  Text Pointer 1: OtherNPCs1.OtherHillGuy
   Text Pointer 2: $0
-  Type: object
+  Type: person
 199:
   Direction: right
   Event Flag: 0x1d5

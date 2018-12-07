@@ -54,3 +54,19 @@ LetItBeFull:
 
 SmallDoor:
     "@Even {name(1)} is too big to fit through this door." end
+
+PopQuiz:
+    "{sound(111)}{pause(40)}{window_open(1)}@OK,{pause(15)} pop quiz!{pause(30)} <A Beach Boys song,{pause(15)} Caroline, XXX.>" next
+    "@Can you fill in the blanks?" newline
+    menu
+    {
+        "Yes" :
+        {
+            "@Buzzzzt!{pause(20)}" newline
+            "  <A Beach Boys song,{pause(15)} Caroline, Yes.> Wrong!{wait}{window_closetop}" eob
+        }
+        "No" :
+        {
+            "@That's correct! I'm impressed.{wait}{window_closetop}" eob
+        }
+    }
