@@ -1,6 +1,18 @@
 KissuStand:
 	define MetAkane = flag 977	//see datacrystal for a list of unused flags
+	define MetAkaneAsFriend = flag 983
 
+	"[19 10 01]"    //checks first party member ID
+    if not result_is(1)
+    {
+        goto(SomeoneElse)
+    }
+	else
+	{
+		goto(Akari)
+	}
+
+Akari:
 	if not MetAkane
 	{
 		"@What?" pause(30) next
@@ -39,13 +51,58 @@ KissuStand:
 	}
 
 Kissu:
-	"@(Akane gives {name(1)} a big kiss)." next
+	"[19 10 01]{swap}@(Akane gives [1C 02 00] a big kiss)." next
 	pause(700) "@(It goes on for longer than you'd expect)." next
-	pause(300)"@What do you mean that's not worth $20?!" end
+	pause(300) "@What do you mean that's not worth $20?!" end
+
+SomeoneElse:
+	if not MetAkaneAsFriend
+	{
+		"@Akari's friend?" next
+		"@Don't judge me."
+		set(MetAkaneAsFriend)
+		end
+	}
+	else
+	{
+		"@So|.|.|." next
+		"@Are you interested?" next
+		"@It's $20 a pop." newline
+		menu
+		{
+			"Yes":
+			{
+				if hasmoney(20) 
+				{
+					takemoney(20)
+					sound(SND_KACHING)
+					"@Oh,/ um|.|.|." next
+					"@C'mere...| I guess?" next
+					goto (Kissu)
+				}
+				else 
+				{
+					"@Oh,/ you don't have enough?" next
+					"@(Dodged a bullet there!)" end
+				}
+			}
+			"No": 
+			{
+				"@Don't tell anyone how I live." end
+			}
+		}
+
+	}
 
 Bat:
 	define SeenSign = flag 978
 	define GotBat = flag 805
+
+	"[19 10 01]"    //checks first party member ID
+    if not result_is(1)
+    {
+        goto(NotAkariBat)
+    }
 
 	if not GotBat
 	{
@@ -75,12 +132,38 @@ Bat:
 		}
 	}
 
+NotAkariBat:
+	if not GotBat
+	{
+		"@You're {name(1)}'s friend,/ right?" next
+		"@Give this to her,/ it might come in handy." next
+		Functions.GetItem(17,NoRoom)
+		set(GotBat)
+		end
+	}
+	else
+	{
+		"@I'm not a charity,/ I've only got one of those." end
+	}
+
 NoRoom:
-	"@Looks like you're carrying too much, sis." next
+	"@Looks like you're carrying too much." next
 	"@Talk to me again when you've cleared some things out."
 	unset(805)
 	end
 
-Heal:	//maybe implement a check for other party members at some point for different dialogue
-	"@Hey, {name(1)}." next
-	"@I got some [1C 01 04] earlier,/ please have some some?[03]" healall "{music(12)}{pause(200)}{music_resume}" eob
+Heal:
+	"[19 10 01]"    //checks first party member ID
+    if result_is(1)
+    {
+		"@Hey, {name(1)}." next
+		goto(Heal2)
+	}
+	else
+	{
+		"@Say,/ you're {name(1)}'s friend,/ right?" next
+		goto(Heal2)
+	}
+
+Heal2:
+	"@I got some [1C 01 04] earlier,/ please have some some.[03]" healall "{music(12)}{pause(200)}{music_resume}" eob

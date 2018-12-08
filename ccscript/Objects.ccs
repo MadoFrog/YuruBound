@@ -19,12 +19,13 @@ BatDoor:
     define GotBat = flag 805
     if GotBat
     {
-        set(981) eob   //lets Akane start healing you
+        set(981)   //lets Akane start healing you
     }
+    eob
 
 NoHomers:
     "@(No" newline
-    "  {name(1)}s" newline
+    "[19 10 01]{swap}  [1C 02 00]s" newline
     "  club)" end
 
 LetItBe:
@@ -33,7 +34,7 @@ LetItBe:
     if not Opened
     {
         set(Opened)
-        "@{name(1)} dug around in the trash can." next
+        "[19 10 01]{swap}@[1C 02 00] dug around in the trash can." next
         "@Well,/ let's see here..." next
         "@There was just plain ol' garbage in the trash can." next
         Functions.GetItem(141, LetItBeFull) eob
@@ -41,7 +42,7 @@ LetItBe:
     else
     {
         "@The garbage can is just stacks upon stacks of Let It Be." next
-        "@{name(1)} doesn't want to take another copy of it." end
+        "[19 10 01]{swap}@[1C 02 00] doesn't want to take another copy of it." end
     }
 
 LetItBeDesc:

@@ -37,3 +37,11 @@ KyoukoDemo:
     "@You want me in the demo?" next
     "@Well, if it's for you." next          //For the sake of documentation, 1F 1E is the code for hiding a sprite, B6 00 is Kyouko, 00 06 is the effect
     window_closeall "{music(11)}{pause(120)}{pause(120)}{pause(120)}{pause(60)}{music_resume}{window_open(1)}@[1C 02 02] joined you.[03] [1F 1E B6 00 06][1F 11 02] {window_closeall}" set(GotKyouko) eob
+
+DemoPolice1:
+    "@Slow down there,/ missy." next
+    "@Go any further in this demo and I'm going to have to give you a ticket!" end
+
+DemoPolice2:
+    "@That face you just made." next
+    "@It's that look that make this job worth doing." end

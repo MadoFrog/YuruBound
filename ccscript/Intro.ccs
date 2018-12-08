@@ -36,6 +36,7 @@ set(375)	//Onett NPCs
 set(422)	//Onett cars
 set(517)	//house lights on
 set(199)	//lets you save
+set(1000)	//just for the demo
 
 hide_party
 gen_sprite (106, 476, 1)	//Activates first flyover

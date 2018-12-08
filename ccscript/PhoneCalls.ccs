@@ -3,9 +3,13 @@ Ayano:
     define CalledAyano = flag 979
     define KyoukoCall = flag 980 //set if Kyouko is in the party while calling
 
-    //Do a check to see who's in the party, for now assume Akari is okay
     "@Hello?" next
-    "@Oh, {name(1)}?" next
+    "[19 10 01]"    //checks first party member ID
+    if not result_is(1)
+    {
+        goto(Kyouko)
+    }
+    "[19 10 01]{swap}@Oh, [1C 02 00]?" next//[19 10 01]{swap} copies the number of the first party member and [1C 02 00] prints that
     if not CalledAyano
     {
         "@Nice to hear from you again." next
@@ -15,7 +19,8 @@ Ayano:
     }
     else
     {
-        "Since we last spoke,/" newline
+        "@How's it going?" next
+        "@Since we last spoke,/" newline
     }
     "@$[1C 0A 00 00 00 00] has been deposited into your bank account." next
     "@Taking away what you've spent, you should now have" next
@@ -23,7 +28,7 @@ Ayano:
     "{counter(1)}@As for exp to get to the next level,[03]" goto(Exp1)
 
 Exp1:
-    "{ctoarg}[1D 19 00][1B 03 {e(Exp4)}][19 10 00][1B 02 {e(Exp4)}]{rtoarg}[19 18 00][1B 02 {e(Exp3)}]" newline
+    "{ctoarg}[1D 19 00][1B 03 {e(Save)}][19 10 00][1B 02 {e(Save)}]{rtoarg}[19 18 00][1B 02 {e(Exp3)}]" newline
     "@[1C 02 00]...{swap}[1C 0A 00 00 00 00].[03]" goto(Exp2)
 
 Exp2:
@@ -34,11 +39,9 @@ Exp3:
     "@[1C 02 00]..." linebreak
     "  has already reached her maximum level." next
     "@That's impressive!" next
-    next
-    next
     goto(Exp2)
 
-Exp4:
+Save:
     newline
     if not CalledAyano
     {
@@ -61,10 +64,61 @@ Exp4:
             "@That's okay,/ I don't mind." next
         }
     }
-    "@Well, take care {name(1)}." next
+    "[19 10 02]" //looks at who is in position 2
+    if result_is (2) //Kyouko
+    {
+        if not KyoukoCall
+        {
+            set(KyoukoCall)
+            "@Say,/ is {name(2)} with you now?" next
+            "@Make sure you look after her,/ okay!" next
+        }
+    }
+    else
+    {
+        unset(KyoukoCall)
+    }
     if KyoukoCall
     {
-        "@T-tell {name(2)} I said hi" next
+        "[1D 0D 02 01 02][1B 03 {KyoukoHurt}]" //if Kyouko is unconcious go to KyoukoHurt - 1D 0D is status check, 02 is Kyouko, 01 02 is unconcious. 1B 03 checks if that statement is true and goes to pointer
     }
+    goto(AyanoFinish)
+
+AyanoFinish:
+    "[19 10 01]{swap}@Well,/ take care,/ [1C 02 00]." next
+    if KyoukoCall
+    {
+        "@T-tell {name(2)} I said hi." next
+    }    
+    newline
+    "{sound(11)}@(Click!  Beep-beep-beep...)" end
+
+KyoukoHurt:
+    "@Oh gosh,/ is {name(2)} alright?" next
+    "@She really does need to be more careful,/ doesn't she?" next goto(AyanoFinish)
+
+Kyouko:
+    "@[0E 01][19 11 02][0D 00][1C 03 00]-{name(2)}?!" next  //prints the first letter of Kyouko's name. [0E 01] loads 1 into secondary memory, [19 11 02] looks at the character stored in secondary memory for
+    "@W-what did you want to tell me?" next                 //party slot 2's name [0D 00][1C 03 00] prints it.
+    "@You forgot?" next
+    "@Well,/ do you want me to record what's happened so far?" newline
+    menu 
+    {
+        "Yes" : 
+        {
+            "@Alright,/ just a second." next
+            save
+            "@Okay,/ I think I got all that." next
+
+        }
+        "No" : 
+        {
+            "@Did you just want to hear my voice or something?" next
+            "@Wasting my time like that..." next
+            "@I guess it can't be helped." next
+        }
+    }
+    "@Goodbye,/ {name(2)}." next
+    "@Be careful for me,/ okay?" next
     newline
     "{sound(11)}@(Click!  Beep-beep-beep...)" end

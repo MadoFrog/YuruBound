@@ -1196,12 +1196,12 @@
   Text Pointer 2: $0
   Type: person
 133:
-  Direction: up
+  Direction: right
   Event Flag: 0x177
-  Movement: 605
+  Movement: 608
   Show Sprite: when event flag set
-  Sprite: 164
-  Text Pointer 1: OtherNPCs1.HillGuy
+  Sprite: 115
+  Text Pointer 1: $c659c9
   Text Pointer 2: $0
   Type: person
 134:
@@ -1294,13 +1294,13 @@
   Text Pointer 1: $c65efc
   Text Pointer 2: $0
   Type: person
-144:
+144:      #144-145 are path to Twoson officers. Flag is 0xd2
   Direction: up
   Event Flag: 0xd2
   Movement: 606
   Show Sprite: when event flag unset
   Sprite: 74
-  Text Pointer 1: $c66002
+  Text Pointer 1: OtherNPCs1.DemoPolice1 #$c66002
   Text Pointer 2: $0
   Type: person
 145:
@@ -1309,7 +1309,7 @@
   Movement: 606
   Show Sprite: when event flag unset
   Sprite: 74
-  Text Pointer 1: $c65f5c
+  Text Pointer 1: OtherNPCs1.DemoPolice2 #$c65f5c
   Text Pointer 2: $0
   Type: person
 146:
@@ -1367,12 +1367,12 @@
   Text Pointer 2: $0
   Type: person
 152:
-  Direction: down
-  Event Flag: 0x1d5
-  Movement: 13
-  Show Sprite: when event flag unset
-  Sprite: 55
-  Text Pointer 1: $c66f4a
+  Direction: up
+  Event Flag: 0x177
+  Movement: 605
+  Show Sprite: when event flag set
+  Sprite: 164
+  Text Pointer 1: OtherNPCs1.HillGuy
   Text Pointer 2: $0
   Type: person
 153:
@@ -1591,9 +1591,9 @@
   Text Pointer 1: $0
   Text Pointer 2: $0
   Type: object
-177:
+177:            #177-180 flag is 0x69
   Direction: down
-  Event Flag: 0x69
+  Event Flag: 0x3e8
   Movement: 8
   Show Sprite: when event flag unset
   Sprite: 199
@@ -1602,7 +1602,7 @@
   Type: object
 178:
   Direction: down
-  Event Flag: 0x69
+  Event Flag: 0x3e8
   Movement: 8
   Show Sprite: when event flag unset
   Sprite: 199
@@ -1611,7 +1611,7 @@
   Type: object
 179:
   Direction: down
-  Event Flag: 0x69
+  Event Flag: 0x3e8
   Movement: 8
   Show Sprite: when event flag unset
   Sprite: 199
@@ -1620,7 +1620,7 @@
   Type: object
 180:
   Direction: down
-  Event Flag: 0x69
+  Event Flag: 0x3e8
   Movement: 8
   Show Sprite: when event flag unset
   Sprite: 199
