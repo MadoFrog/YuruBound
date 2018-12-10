@@ -94,7 +94,7 @@
   Movement: 606
   Show Sprite: always
   Sprite: 114
-  Text Pointer 1: $c74e8f
+  Text Pointer 1: OtherNPCs1.StoreGuy #$c74e8f
   Text Pointer 2: $0
   Type: person
 11:
@@ -832,7 +832,7 @@
   Movement: 12
   Show Sprite: always
   Sprite: 125
-  Text Pointer 1: $c7316f
+  Text Pointer 1: OtherNPCs1.FunnyMan #$c7316f
   Text Pointer 2: $0
   Type: person
 93:
@@ -841,7 +841,7 @@
   Movement: 12
   Show Sprite: always
   Sprite: 121
-  Text Pointer 1: $c731f0
+  Text Pointer 1: OtherNPCs1.YuruBoundGirl #$c731f0
   Text Pointer 2: $0
   Type: person
 94:
@@ -1183,7 +1183,7 @@
   Movement: 607
   Show Sprite: when event flag set
   Sprite: 114
-  Text Pointer 1: $c749c7
+  Text Pointer 1: OtherNPCs1.MimiFriend #$c749c7
   Text Pointer 2: $0
   Type: person
 132:
@@ -1192,7 +1192,7 @@
   Movement: 607
   Show Sprite: when event flag set
   Sprite: 78
-  Text Pointer 1: $c74a3d
+  Text Pointer 1: OtherNPCs1.ReggaeMan #$c74a3d
   Text Pointer 2: $0
   Type: person
 133:
@@ -1657,12 +1657,12 @@
 184:
   Direction: down
   Event Flag: 0x0
-  Movement: 8
+  Movement: 12
   Show Sprite: always
-  Sprite: 227
-  Text Pointer 1: $0
+  Sprite: 65
+  Text Pointer 1: OtherNPCs1.McChicken
   Text Pointer 2: $0
-  Type: object
+  Type: person
 185:
   Direction: down
   Event Flag: 0x0

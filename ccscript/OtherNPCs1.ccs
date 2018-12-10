@@ -87,3 +87,52 @@ ShyGuy:                         //originally for hte shy guy in the library, but
     "       ....." linebreak
     "            ....." end
     }
+
+ReggaeMan:
+    "@I hear that {name(2)} kid is pretty special." next
+    "@She lives in the next town over,/ but she comes here to use the arcade." next
+    "@She's special, but I can't remember why." next
+    "@Maybe she's just really good at Jubeat?" end
+
+StoreGuy:
+    "[19 10 01]{result_is(1)}[1B 02 {e(data_28.l_0xc74ef1)}]@Hey,{pause(15)} I know your hard-earned cash is important to you," next
+    "@but you should call your sister." next
+    "@I'm sure her heart is aching from worrying about you." end goto(data_28.l_0xc74ef1)
+
+MimiFriend:
+    "@I just want to see that cute bunny girl from Pop'n Music," next
+    "@but the arcade is full of Sharks." next
+    "@No,/ not the animal!{pause(30)} The gang." end
+
+McChicken: //feel free to remove this shitty meme in your pull request
+    "@For me, it's the chicken burger. The best fast food sandwich." next
+    "@I even ask for extra chicken burger sauce packets and the staff is so friendly and more" next
+    "  than willing to oblige." next
+    "@One time I asked for chicken burger sauce packets and they gave me three." next
+    "@I said, <Wow, three for free!> and the nice friendly" next
+    "  BurgerShop worker laughed and said, <I'm going to call you 3-for-free!>." next
+    "@Now the staff greets me with <hey it's 3-for-free!>" next
+    "  and ALWAYS give me three packets." next
+    "@It's such a fun and cool atmosphere at my local Burger Shop," next
+    "@I go there at least 3 times a week for lunch" next
+    "  and a large iced coffee with milk instead of cream," next
+    "@1-2 times for breakfast on the weekend," next
+    "@and maybe once for dinner when I'm in a rush but want" next
+    "  a great meal that is affordable, fast," next
+    "@and can match my daily nutritional needs." next
+    "@I even dip my fries in chicken burger sauce," next
+    "@it's delicious! What a great restaurant." end
+
+YuruBoundGirl:
+    "[06 49 00 {e(FinishedYuruBound)}]@I wonder if <YuruBound> has been released yet." next //the flag for finishing the game probably
+    "@Nah,/ can't be." next
+    "@The developers spend way too long on everything." end
+
+FinishedYuruBound:
+    "@Listen to this!{pause(20)}  I finished YuruBound!" end
+
+FunnyMan:
+    "@I'm supposed to say something funny,/ right?" next
+    "@You'll have to excuse me but I'm quite lite on material at the moment." next
+    "@I'm really very sorry." next
+    "@I hope I've not disappointed you too much." end
