@@ -71,3 +71,10 @@ PopQuiz:
             "@That's correct! I'm impressed.{wait}{window_closetop}" eob
         }
     }
+
+How2GirlsHaveSex:
+    "@<How 2 Girls Have Sex>,{pause(15)} chapter three.>" next
+    "@Woah! They do what?!" next
+    "@That can't be right,/ can it?" next
+    "@No way|.|.|." next
+    "[19 10 01]{swap}@([1C 02 00] blushed heavily and put the book back.)" end

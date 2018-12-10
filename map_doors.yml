@@ -2490,15 +2490,11 @@
   - Type: object
     X: 16
     Y: 8
-    Text Pointer: $c87dff
-  - Type: object
-    X: 17
-    Y: 8
-    Text Pointer: $c87dff
+    Text Pointer: Objects.How2GirlsHaveSex
   - Type: object
     X: 18
     Y: 8
-    Text Pointer: $c87dff
+    Text Pointer: Objects.How2GirlsHaveSex
   - Type: door
     Destination X: 985
     Event Flag: 0
@@ -2522,10 +2518,14 @@
     Event Flag: 0
     Destination Y: 72
     X: 23
-    Y: 26
+    Y: 27
     Style: 10
     Text Pointer: $0
     Direction: down
+  - Type: object
+    X: 17
+    Y: 8
+    Text Pointer: Objects.How2GirlsHaveSex
   28:
   - Type: door
     Destination X: 232

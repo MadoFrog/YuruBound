@@ -1,3 +1,5 @@
+command e(label) "{long label}" //use this coilsnake gets confused over e
+
 TheDog:
     "@(Yeah, it's a lazy dog dangling afternoon.)" next
     "@(You should call Ayano and give her an update if anything happens,/" next
@@ -29,7 +31,7 @@ KissGuy:
     }
 
 OtherHillGuy:
-    "Call it a hunch, but I get the feeling you'll be wasting your time going up this hill" end
+    "@Call it a hunch, but I get the feeling you'll be wasting your time going up this hill." end
 
 KyoukoDemo:
     define GotKyouko = flag 982
@@ -45,3 +47,43 @@ DemoPolice1:
 DemoPolice2:
     "@That face you just made." next
     "@It's that look that make this job worth doing." end
+
+MapLady:
+    "@Hello there!" next
+    "[06 97 02 {e(ReturnMap)}][06 FF 01 {e(ReturnMap)}][06 59 00 {e(OvercomingShyness)}]@Pretty much everything here is reference only." next
+    "@Apart from the maps,/ we have tonnes of those." next
+    "@Do you want to borrow one?" linebreak
+    "[19 02]Yes[02][19 02]No[02][1C 07 02][11]{clearline}[09 02 {e(data_27.l_0xc732e1)} {e(DontTakeMap)}]" goto(DontTakeMap)
+
+DontTakeMap:
+    "@A cute girl like you without a map won't be popular with the girls." next
+    "@Do you want one now?" linebreak
+    "[19 02]Yes[02][19 02]No[02][1C 07 02][11]{clearline}[09 02 {e(data_27.l_0xc732e1)} {e(DontTakeMap)}]" goto(DontTakeMap)
+
+ReturnMap:
+    "@You don't need to give us that map back just yet." next
+    "@Come back in the year 2021 to return it." end
+
+OvercomingShyness:
+    "@Please return <Overcoming Shyness> later!" 
+    
+ShyGuy:                         //originally for hte shy guy in the library, but he's actually important later, so put this on someone else maybe
+    define ShyGuy = flag 984
+    if not ShyGuy
+    {
+        counter_zero
+        set(ShyGuy)
+    }
+    inc
+    if counter_is(10)
+    {
+        unset(ShyGuy)
+        "@What can I say?" next
+        "@I'm a shy guy." end
+    }
+    else
+    {
+    "@....." linebreak
+    "       ....." linebreak
+    "            ....." end
+    }

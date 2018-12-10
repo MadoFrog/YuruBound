@@ -880,13 +880,13 @@
   Text Pointer 1: $c6a4f2
   Text Pointer 2: $0
   Type: person
-98:
+98: #Onett Librarian
   Direction: down
   Event Flag: 0x0
   Movement: 8
   Show Sprite: always
   Sprite: 68
-  Text Pointer 1: $c73236
+  Text Pointer 1: OtherNPCs1.MapLady #$c73236
   Text Pointer 2: $c7343f
   Type: person
 99:
