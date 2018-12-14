@@ -1836,7 +1836,7 @@
     X: 1
     Y: 13
     Style: 15
-    Text Pointer: $c9ae01
+    Text Pointer: Objects.MayorsOffice #$c9ae01
     Direction: right
   - Type: door
     Destination X: 963

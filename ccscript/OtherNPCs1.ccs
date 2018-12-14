@@ -1,4 +1,4 @@
-command e(label) "{long label}" //use this coilsnake gets confused over e
+command e(label) "{long label}" //use this if coilsnake gets confused over e
 
 TheDog:
     "@(Yeah, it's a lazy dog dangling afternoon.)" next
@@ -136,3 +136,20 @@ FunnyMan:
     "@You'll have to excuse me but I'm quite lite on material at the moment." next
     "@I'm really very sorry." next
     "@I hope I've not disappointed you too much." end
+
+GhostLady:
+    "@If one of your friends gets horribly injured and becomes a spooky ghost,/ don't worry!" next
+    "@The nurse at the front desk of most hospitals will be able to help you out." next
+    "@If you can foot the bill,/ that is." next
+    "@Otherwise your friend is a bit boned." end
+
+TonightYou:
+    "@Tonight|.|.|. you|.|.|." end
+
+MayorOfficer:
+    "[1F 1A 58 00 03]{pause(60)}[1F 1B 58 00][1F F1 58 00 3D 00][1F 61][1F E6 58 00]{window_open(1)}@The Mayor is very busy taking br-| I mean fixing this town." next  //copied from the ripped script
+    "@Those Sharks are running amok!" next
+    "@Wait,/ are you the one who's trying to reform the Sharks?" next
+    "@Wa ho!  Wa ho!  Wa ho!" next
+    "@You've got to be kidding!" next
+    "@Scram![03]{window_closeall}[1F E9 58 00][1F 15 ED 00 3E 00 01]{pause(1)}[1F EF ED 00][1F E8 FF][1F 61][1F ED][1F 21 40]{set(flag 2)}" eob

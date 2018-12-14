@@ -1,3 +1,5 @@
+command e(label) "{long label}" //use this if coilsnake gets confused over e
+
 AkaneDoor:
     define SeenSign = flag 978
 
@@ -78,3 +80,6 @@ How2GirlsHaveSex:
     "@That can't be right,/ can it?" next
     "@No way|.|.|." next
     "[19 10 01]{swap}@([1C 02 00] blushed heavily and put the book back.)" end
+
+MayorsOffice:
+    "[06 40 00 {e(data_50.l_0xc9992f)}][1F 63 {e(OtherNPCs1.MayorOfficer)}]" eob

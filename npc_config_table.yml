@@ -1237,7 +1237,7 @@
   Movement: 607
   Show Sprite: when event flag set
   Sprite: 53
-  Text Pointer 1: $c65c01
+  Text Pointer 1: OtherNPCs1.GhostLady #$c65c01
   Text Pointer 2: $0
   Type: person
 138:
@@ -1246,7 +1246,7 @@
   Movement: 608
   Show Sprite: when event flag set
   Sprite: 130
-  Text Pointer 1: $c65c89
+  Text Pointer 1: OtherNPCs1.TonightYou #$c65c89
   Text Pointer 2: $0
   Type: person
 139:

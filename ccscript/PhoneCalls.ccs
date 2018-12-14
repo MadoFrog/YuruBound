@@ -1,5 +1,5 @@
 Ayano:
-    command e(label) "{long label}" //use this coilsnake gets confused over e
+    command e(label) "{long label}" //use this if coilsnake gets confused over e
     define CalledAyano = flag 979
     define KyoukoCall = flag 980 //set if Kyouko is in the party while calling
 
