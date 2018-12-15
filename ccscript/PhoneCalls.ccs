@@ -22,7 +22,7 @@ Ayano:
         "@How's it going?" next
         "@Since we last spoke,/" newline
     }
-    "@$[1C 0A 00 00 00 00] has been deposited into your bank account." next
+    "[1D 24 01]{swap}@$[1C 0A 00 00 00 00] has been deposited into your bank account." next
     "@Taking away what you've spent, you should now have" next
     "@$[1C 01 07] in the bank." next
     "{counter(1)}@As for exp to get to the next level,[03]" goto(Exp1)

@@ -607,7 +607,7 @@
   Movement: 605
   Show Sprite: when event flag unset
   Sprite: 75
-  Text Pointer 1: $c7699e
+  Text Pointer 1: OtherNPCs1.PoliceGuy #$c7699e
   Text Pointer 2: $0
   Type: person
 68:
@@ -1498,7 +1498,7 @@
   Movement: 606
   Show Sprite: when event flag unset
   Sprite: 128
-  Text Pointer 1: $c67bb9
+  Text Pointer 1: OtherNPCs1.Checkaroony #$c67bb9
   Text Pointer 2: $0
   Type: person
 167:
@@ -1591,9 +1591,9 @@
   Text Pointer 1: $0
   Text Pointer 2: $0
   Type: object
-177:            #177-180 flag is 0x69
+177:
   Direction: down
-  Event Flag: 0x3e8
+  Event Flag: 0x69
   Movement: 8
   Show Sprite: when event flag unset
   Sprite: 199
@@ -1602,7 +1602,7 @@
   Type: object
 178:
   Direction: down
-  Event Flag: 0x3e8
+  Event Flag: 0x69
   Movement: 8
   Show Sprite: when event flag unset
   Sprite: 199
@@ -1611,7 +1611,7 @@
   Type: object
 179:
   Direction: down
-  Event Flag: 0x3e8
+  Event Flag: 0x69
   Movement: 8
   Show Sprite: when event flag unset
   Sprite: 199
@@ -1620,7 +1620,7 @@
   Type: object
 180:
   Direction: down
-  Event Flag: 0x3e8
+  Event Flag: 0x69
   Movement: 8
   Show Sprite: when event flag unset
   Sprite: 199

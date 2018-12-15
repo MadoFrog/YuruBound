@@ -51,8 +51,8 @@ Akari:
 	}
 
 Kissu:
-	"[19 10 01]{swap}@(Akane gives [1C 02 00] a big kiss)." next
-	pause(700) "@(It goes on for longer than you'd expect)." next
+	"[19 10 01]{swap}@(Akane gives [1C 02 00] a big kiss.)" next
+	pause(700) "@(It goes on for longer than you'd expect.)" next
 	pause(300) "@What do you mean that's not worth $20?!" end
 
 SomeoneElse:
@@ -115,10 +115,10 @@ Bat:
 			"@{name(1)},/ what have I told you about trying to go in in my room?" pause(60) next
 		}
 		"@Ah,/ here you go!" next
-		"@(Akane produces a cracked bat)." next
+		"@(Akane produces a cracked bat.)" next
 		Functions.GetItem(17,NoRoom)
-		set(GotBat)
-		end
+		set(GotBat) newline
+		"@Make sure you equip it,/ otherwise it's pretty useless." end
 	}
 	else
 	{

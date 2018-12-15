@@ -31,7 +31,6 @@ flyover3mov (2664, 336)
 Intro:
 set(469)	//clears officers
 set(104)	//day music
-set(105)	//no roadblocks
 set(375)	//Onett NPCs
 set(422)	//Onett cars
 set(517)	//house lights on
@@ -49,6 +48,7 @@ gen_sprite (106, 478, 1)	//Activates first flyover
 call (0xc9b4b8)
 warp (10)					//Warps to Ness's room
 show_party (1)
+unset(11)					//turns enemies on (no, not like that, perv!)
 window_open(1)
 "@A note from the developer:" next
 "@Sorry the intro isn't perfect,/ but gosh darnit,/ it's close enough!" next

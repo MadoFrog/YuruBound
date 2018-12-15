@@ -2599,7 +2599,7 @@
   Death Text Pointer: $ef6d96
   Defense: 4
   Encounter Text Pointer: $ef78b8
-  Experience points: 1
+  Experience points: 2 #1
   Final Action: 0
   Final Action Argument: 0
   Fire vulnerability: 70%
@@ -5701,7 +5701,7 @@
   Death Text Pointer: $ef6d96
   Defense: 5
   Encounter Text Pointer: $ef78b8
-  Experience points: 4
+  Experience points: 6 #4
   Final Action: 0
   Final Action Argument: 0
   Fire vulnerability: 100%
@@ -7487,7 +7487,7 @@
   Death Text Pointer: $ef6d96
   Defense: 3
   Encounter Text Pointer: $ef78b8
-  Experience points: 3
+  Experience points: 5 #3
   Final Action: 0
   Final Action Argument: 0
   Fire vulnerability: 100%

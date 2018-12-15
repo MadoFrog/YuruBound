@@ -153,3 +153,15 @@ MayorOfficer:
     "@Wa ho!  Wa ho!  Wa ho!" next
     "@You've got to be kidding!" next
     "@Scram![03]{window_closeall}[1F E9 58 00][1F 15 ED 00 3E 00 01]{pause(1)}[1F EF ED 00][1F E8 FF][1F 61][1F ED][1F 21 40]{set(flag 2)}" eob
+
+PoliceGuy:
+    "[06 49 00 {e(data_29.l_0xc76b36)}][06 69 00 {e(YuruBoundCop)}][06 B6 00 {e(data_29.l_0xc76a1f)}]@The townspeople are in a state of confusion." next
+    "@At times like this,/ some people start getting reeeeal weird." next
+    "@So we police are being ultra cautious." end
+
+YuruBoundCop:
+    "@I've been playing <YuruBound> lately...{pause(20)}  I'm having a tough time." end
+
+Checkaroony:
+    "@I heard there's a girl who stops to read each bulletin board she encounters." next
+    "@Then she says,{pause(15)} <check-a-roony!>{pause(20)}  Is that you?" end
