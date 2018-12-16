@@ -9,5 +9,5 @@ Please use CoilSnake 3.0 **not** 3.33, as 3.33 has an issue with the altered spr
 Just head over to [Releases](https://github.com/MadoFrog/YuruBound/releases) and download the IPS patch for the version you want. You'll need a clean ROM of EarthBound and a program to apply the patch - [CoilSnake](https://github.com/mrtenda/CoilSnake/releases) is one that will let you do that. 
 
 # How Can I Help?
-Truthfully, I don't really know how to use github, but I think you can submit a pull request to add any changes you've made. Be it a new sprite, some new dialogue, or a whole epic at the library. 
+Truthfully, I don't really know how to use git, but I think you can submit a pull request to add any changes you've made. Be it a new sprite, some new dialogue, or a whole epic at the library. 
 That said, if you are going to add new text, please append any flags used to Flags_in_use.txt.
