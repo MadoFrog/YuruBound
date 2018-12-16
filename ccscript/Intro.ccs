@@ -35,6 +35,7 @@ set(375)	//Onett NPCs
 set(422)	//Onett cars
 set(517)	//house lights on
 set(199)	//lets you save
+set(200)	//lets you call Akane. Might want to find a way to unset this in the Akaza household
 set(1000)	//just for the demo
 
 hide_party

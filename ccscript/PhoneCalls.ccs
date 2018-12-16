@@ -1,5 +1,6 @@
+command e(label) "{long label}" //use this if coilsnake gets confused over e
+
 Ayano:
-    command e(label) "{long label}" //use this if coilsnake gets confused over e
     define CalledAyano = flag 979
     define KyoukoCall = flag 980 //set if Kyouko is in the party while calling
 
@@ -122,3 +123,43 @@ Kyouko:
     "@Be careful for me,/ okay?" next
     newline
     "{sound(11)}@(Click!  Beep-beep-beep...)" end
+
+Akane1:
+    "[19 10 01]{rtoarg}{result_is(1)}[1B 02 {e(Akane2)}][06 49 00 {e(data_32.l_0xc7d226)}]{isset(flag 688)}[1B 02 {e(Akane3)}][1D 0D 01 06 02][1B 03 {e(Akane4)}][1D 0D 01 01 08][1B 03 {e(data_32.l_0xc7ccec)}][06 B1 02 {e(data_32.l_0xc7ce96)}][1D 21 07][09 07 {e(Akane5)} {e(Akane5)} {e(data_32.l_0xc7cf6c)} {e(data_32.l_0xc7cf6c)} {e(data_32.l_0xc7d05a)} {e(data_32.l_0xc7d05a)} {e(data_32.l_0xc7d102)}]" goto(Akane5)
+
+Akane2:
+    "[19 10 01]{swap}@Oh, is this that darling little sister [1C 02 00]?" next
+    "@Are you doing okay?" next
+    "@Please come visit me sometime." next
+    "{sound(11)}@Click!  Beep-beep-beep..." end
+
+Akane3:
+    "@Is that you, [1C 01 08]?" next
+    "@You called me back sooner than I thought..." next
+    "@I'm doing fine." next
+    "@Your friend dropped by to tell you that they're working part-time for Escargo Express." next
+    "@Here's their number..." next
+    "@Oh,/ uh/ the demo police are telling me I shouldn't give out that number.{set(flag 688)}| Sorry." next //delete this line for the not demo
+    "@Call me when you have some time." next
+    "@... Oh... you don't have any free time?" end //next
+    "{set(flag 201)}{set(flag 688)}" goto(data_17.l_0xc636e5)   //201 is Escargo Express' number 688 is a check if this conversation has been had
+
+Akane4:
+    "@Hello, [1C 01 08]?" linebreak
+    "  What's wrong?  You sound so sad..." next
+    "@Are you homesick?...  Well, I knew there would be days like this. " next
+    "@It must make you feel better, listening to your sister's sweet voice." next
+    "@...So, do you feel any better?" next
+    "@Well, I'd better get going." next
+    "@I'm reading a very exciting novel. It's a real page turner!" next
+    "@Take care {name(1)}" next
+    "{sound(11)}  Click!  Beep-beep-beep...[03]{window_closeall}" goto(HomeSick)
+
+Akane5:
+    "@[1C 01 08]?" next
+    "@That's nice of you to call me." next
+    "@Nothing's going on here at the moment,/ but take care." next
+    "@Click!  Beep-beep-beep...{wait}{sound(11)}" eob
+
+HomeSick:
+    "{pause(30)}{window_open(1)}@[1C 01 08] got over being homesick.[19 05 01 06 01]{sound(37)}{wait}{window_closeall}" eob

@@ -21,7 +21,7 @@ BatDoor:
     define GotBat = flag 805
     if GotBat
     {
-        set(981)   //lets Akane start healing you
+        set(981)    //lets Akane start healing you
     }
     eob
 

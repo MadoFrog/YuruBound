@@ -4,8 +4,8 @@
   Text Pointer: PhoneCalls.Ayano #$c63229
 1:
   Event Flag: 0xc8
-  Name: Mom
-  Text Pointer: $c7cb5f
+  Name: Akane
+  Text Pointer: PhoneCalls.Akane1 #$c7cb5f
 2:
   Event Flag: 0xc9
   Name: Escargo Express
