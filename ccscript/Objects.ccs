@@ -82,4 +82,11 @@ How2GirlsHaveSex:
     "[19 10 01]{swap}@([1C 02 00] blushed heavily and put the book back.)" end
 
 MayorsOffice:
-    "[06 40 00 {e(data_50.l_0xc9992f)}][1F 63 {e(OtherNPCs1.MayorOfficer)}]" eob
+    //"[06 40 00 {e(data_50.l_0xc9992f)}][1F 63 {e(OtherNPCs1.MayorOfficer)}]" eob //uncomment after demo
+    "[06 40 00 {e(DemoPolice)}][1F 63 {e(OtherNPCs1.MayorOfficer)}]" eob //delete after demo
+
+DemoPolice: //delete after demo
+    "[1F 63 {e(OtherNPCs1.MayorDemoPolice)}]" eob
+
+DomkeyKong:
+    "@<Domkey Kong>." end

@@ -13,7 +13,7 @@
   Movement: 605
   Show Sprite: when event flag unset
   Sprite: 284
-  Text Pointer 1: $c74c07
+  Text Pointer 1: OtherNPCs1.FrankGuard #$c74c07
   Text Pointer 2: $0
   Type: person
 2:
@@ -31,7 +31,7 @@
   Movement: 12
   Show Sprite: always
   Sprite: 284
-  Text Pointer 1: $c74cf7
+  Text Pointer 1: OtherNPCs1.ArcadeShark #$c74cf7
   Text Pointer 2: $0
   Type: person
 4:
@@ -1115,12 +1115,12 @@
   Text Pointer 2: $0
   Type: person
 124:
-  Direction: left
+  Direction: right
   Event Flag: 0x1d2
-  Movement: 55
-  Show Sprite: when event flag set
-  Sprite: 382
-  Text Pointer 1: $c5e8a0
+  Movement: 605
+  Show Sprite: always
+  Sprite: 119
+  Text Pointer 1: OtherNPCs1.ShyGuy
   Text Pointer 2: $0
   Type: person
 125:
@@ -1642,7 +1642,7 @@
   Movement: 609
   Show Sprite: when event flag unset
   Sprite: 002
-  Text Pointer 1: OtherNPCs1.KyoukoDemo
+  Text Pointer 1: OtherNPCs1.KyoukoPen
   Text Pointer 2: $0
   Type: object
 183:

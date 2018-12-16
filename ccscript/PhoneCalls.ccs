@@ -75,14 +75,10 @@ Save:
             "@Make sure you look after her,/ okay!" next
         }
     }
-    else
-    {
-        unset(KyoukoCall)
-    }
     if KyoukoCall
     {
-        "[1D 0D 02 01 02][1B 03 {KyoukoHurt}]" //if Kyouko is unconcious go to KyoukoHurt - 1D 0D is status check, 02 is Kyouko, 01 02 is unconcious. 1B 03 checks if that statement is true and goes to pointer
-    }
+        "[1D 0D 02 01 02][1B 03 {KyoukoHurt}]"  //if Kyouko is unconcious go to KyoukoHurt - 1D 0D is status check, 02 is Kyouko, 01 02 is unconcious. 1B 03 checks if that statement is true and goes to pointer
+    }                                           //maybe add a check for if Kyouko leaves the party
     goto(AyanoFinish)
 
 AyanoFinish:

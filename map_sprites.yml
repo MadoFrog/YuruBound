@@ -46,9 +46,6 @@
   - X: 240
     Y: 56
     NPC ID: 193
-  - X: 216
-    Y: 112
-    NPC ID: 124
   - X: 48
     Y: 128
     NPC ID: 125
@@ -83,6 +80,9 @@
   - X: 144
     Y: 248
     NPC ID: 188
+  - X: 19
+    Y: 110
+    NPC ID: 124
   9: null
   10: null
   11: null

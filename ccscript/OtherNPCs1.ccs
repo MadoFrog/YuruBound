@@ -33,9 +33,39 @@ KissGuy:
 OtherHillGuy:
     "@Call it a hunch, but I get the feeling you'll be wasting your time going up this hill." end
 
+KyoukoPen:
+    define BeatFrank = flag 64
+    if BeatFrank
+    {
+        goto(KyoukoBeatFrank)
+    }
+    "@Hey,/ {name(1)}." next
+    "@This Frank guy isn't letting me leave." next
+    "@I've been in this spot for the last three days," next
+    "@mostly living off a grass-based diet." next
+    "@He just keeps muttering to himself." next
+    "@Can you do something about this?" newline
+    menu 
+    {
+        "Yes" : 
+        {
+            "@That's the {name(1)} I know and love,/ show him who's boss!" end
+
+        }
+        "No" : 
+        {
+            "@Oh,/ that's a bummer." next
+            "@Can't blame a girl for trying." end
+        }
+    }
+
+KyoukoBeatFrank:
+    "@Wow, you did it, {name(1)}!" next
+    "@Now I can finally go home." next goto(KyoukoBeatFrank) //change to end after the demo
+
 KyoukoDemo:
     define GotKyouko = flag 982
-    "@What's that,/ {name(1)}?" next
+    "@What's that?" next
     "@You want me in the demo?" next
     "@Well, if it's for you." next          //For the sake of documentation, 1F 1E is the code for hiding a sprite, B6 00 is Kyouko, 00 06 is the effect
     window_closeall "{music(11)}{pause(120)}{pause(120)}{pause(120)}{pause(60)}{music_resume}{window_open(1)}@[1C 02 02] joined you.[03] [1F 1E B6 00 06][1F 11 02] {window_closeall}" set(GotKyouko) eob
@@ -67,7 +97,7 @@ ReturnMap:
 OvercomingShyness:
     "@Please return <Overcoming Shyness> later!" 
     
-ShyGuy:                         //originally for hte shy guy in the library, but he's actually important later, so put this on someone else maybe
+ShyGuy:
     define ShyGuy = flag 984
     if not ShyGuy
     {
@@ -107,18 +137,18 @@ MimiFriend:
 McChicken: //feel free to remove this shitty meme in your pull request
     "@For me, it's the chicken burger. The best fast food sandwich." next
     "@I even ask for extra chicken burger sauce packets and the staff is so friendly and more" next
-    "  than willing to oblige." next
+    "@than willing to oblige." next
     "@One time I asked for chicken burger sauce packets and they gave me three." next
     "@I said, <Wow, three for free!> and the nice friendly" next
-    "  BurgerShop worker laughed and said, <I'm going to call you 3-for-free!>." next
+    "@BurgerShop worker laughed and said, <I'm going to call you 3-for-free!>." next
     "@Now the staff greets me with <hey it's 3-for-free!>" next
-    "  and ALWAYS give me three packets." next
+    "@and ALWAYS give me three packets." next
     "@It's such a fun and cool atmosphere at my local Burger Shop," next
     "@I go there at least 3 times a week for lunch" next
-    "  and a large iced coffee with milk instead of cream," next
+    "@and a large iced coffee with milk instead of cream," next
     "@1-2 times for breakfast on the weekend," next
     "@and maybe once for dinner when I'm in a rush but want" next
-    "  a great meal that is affordable, fast," next
+    "@a great meal that is affordable, fast," next
     "@and can match my daily nutritional needs." next
     "@I even dip my fries in chicken burger sauce," next
     "@it's delicious! What a great restaurant." end
@@ -154,6 +184,14 @@ MayorOfficer:
     "@You've got to be kidding!" next
     "@Scram![03]{window_closeall}[1F E9 58 00][1F 15 ED 00 3E 00 01]{pause(1)}[1F EF ED 00][1F E8 FF][1F 61][1F ED][1F 21 40]{set(flag 2)}" eob
 
+MayorDemoPolice: //feel free to delete after demo
+    "[1F 1A 58 00 03]{pause(60)}[1F 1B 58 00][1F F1 58 00 3D 00][1F 61][1F E6 58 00]{window_open(1)}@Listen kid,/ it's real nice of you to beat the sharks and all." next  //copied from the ripped script
+    "@But,/ well,/ how do I put this?" next
+    "@The demo ends here." next
+    "@Feel free to walk around,/ but don't expect anything too substantive." next
+    "@Hey,/ I don't make the rules!" next
+    "@That said,/ go any further and I'm going to have to give you a ticket. [03]{window_closeall}[1F E9 58 00][1F 15 ED 00 3E 00 01]{pause(1)}[1F EF ED 00][1F E8 FF][1F 61][1F ED][1F 21 40]{set(flag 2)}" eob
+
 PoliceGuy:
     "[06 49 00 {e(data_29.l_0xc76b36)}][06 69 00 {e(YuruBoundCop)}][06 B6 00 {e(data_29.l_0xc76a1f)}]@The townspeople are in a state of confusion." next
     "@At times like this,/ some people start getting reeeeal weird." next
@@ -165,3 +203,24 @@ YuruBoundCop:
 Checkaroony:
     "@I heard there's a girl who stops to read each bulletin board she encounters." next
     "@Then she says,{pause(15)} <check-a-roony!>{pause(20)}  Is that you?" end
+
+ArcadeShark:
+    "@Yup, I'm a real pro at Domkey Kong." next
+    "@I get all the ladies as a result." next
+    "[19 10 02]" //looks at who is in position 2
+    if result_is (2) //Kyouko
+    {
+        "@I guess you're pretty good at Domkey Kong too,/ huh?" end
+    }
+    else
+    {
+        "@You look like you need help being popular with the ladies," next
+        "@maybe you should get as good as I am." end
+    }    
+
+FrankGuard:
+    "[06 28 00 {e(data_32.l_0xc7c588)}][06 40 00 {e(data_28.l_0xc74c85)}]@Hey kid!{pause(20)}  Do you wanna become a member?" linebreak
+    "[19 02]Yes[02][19 02]No[02][1C 07 02][11]{clearline}[09 02 {e(YuruBoundShark)} {e(data_28.l_0xc74c49)}]" goto(data_28.l_0xc74c49)
+
+YuruBoundShark:
+    "@Come back after you finish YuruBound!" end
