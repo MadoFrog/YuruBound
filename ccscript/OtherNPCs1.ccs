@@ -61,7 +61,7 @@ KyoukoPen:
 
 KyoukoBeatFrank:
     "@Wow, you did it, {name(1)}!" next
-    "@Now I can finally go home." next goto(KyoukoBeatFrank) //change to end after the demo
+    "@Now I can finally go home." next goto(KyoukoDemo) //change to end after the demo
 
 KyoukoDemo:
     define GotKyouko = flag 982

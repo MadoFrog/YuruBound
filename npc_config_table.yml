@@ -1644,7 +1644,7 @@
   Sprite: 002
   Text Pointer 1: OtherNPCs1.KyoukoPen
   Text Pointer 2: $0
-  Type: object
+  Type: person
 183:
   Direction: down
   Event Flag: 0x0
